@@ -1,0 +1,242 @@
+/*
+Theme Name: tips.ramonvoliveira.dev
+Theme URI: https://tips.ramonoliveira.dev
+Author: Ramon Oliveira
+Author URI: https://tips.ramonoliveira.dev
+Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
+Version: 1.0
+*/
+
+* {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #a0a0a0;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 1em;
+    margin: 0 auto;
+    background: #222222;
+}
+
+header {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#logo,
+#search_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    grid-column: 2 / 7;
+    background: #742f2f; //APAGAR
+}
+
+#search_area {
+    grid-column: 7 / 12;
+    background: #50742f; //APAGAR
+    input {
+        width: clamp(minimo, abaixo do max, max e atual);
+        border: none;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    button {
+        border: none;
+        background: none;
+    }
+}
+
+#list_tags {
+    background: #74732f; //APAGAR
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+    ul {
+        background: #2f7465;
+        grid-column: 1 / 13;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+// ------------------------- MAIN ------------------------- //
+
+#main {
+    background: #ff00ea; //APAGAR
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+nav#languages {
+    background: #602f74; //APAGAR
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#languages_itens {
+    background: #042720;
+    grid-column: 2 / 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#main_content {
+    background: chocolate;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    article {
+        grid-column: span 3;
+        background: rgb(75, 50, 32);
+        display: flex;
+        justify-content: center;
+        margin: 0 0.2em;
+        align-items: center;
+    }
+
+    .iten_info {
+        background: crimson;
+        padding: 0 1.2em;
+        overflow: hidden;
+        height: 60px;
+
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .iten_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section#main_content article {
+    margin: 0.5em 1em;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: transform 0.05s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+section#main_content article:nth-child(1n) {
+    width: 150px;
+    background: rgb(0, 47, 255);
+}
+section#main_content article:nth-child(2n) {
+    width: 250px;
+    background: rgb(255, 0, 0);
+}
+section#main_content article:nth-child(3n) {
+    width: 300px;
+    background: rgb(255, 251, 0);
+}
+section#main_content article:nth-child(4n) {
+    width: 500x;
+    background: rgb(247, 0, 255);
+}
+
+// ------------------------- FOOTER ------------------------- //
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: rgb(56, 31, 22);
+    gap: 1em;
+
+    #infop {
+        background: crimson;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #social {
+        background: cornflowerblue;
+    }
+
+    #copyright {
+        background: hotpink;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+// ------------------------- RESPONSIVE ------------------------- //
+@media (max-width: 576px) {
+    body {
+        background: rgb(247, 0, 255);
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #infop {
+        width: 100%;
+    }
+
+    #social {
+        width: 100%;
+    }
+
+    #copyright {
+        width: 100%;
+    }
+
+    section#main_content article:nth-child(1n),
+    section#main_content article:nth-child(2n),
+    section#main_content article:nth-child(3n),
+    section#main_content article:nth-child(4n) {
+        width: 80%;
+        background: rgb(247, 0, 255);
+    }
+}
+
+// TESTES
+.python i {
+    font-size: 5em;
+}
