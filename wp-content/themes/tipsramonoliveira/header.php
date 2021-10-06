@@ -16,7 +16,7 @@
 
     <title>Tips - Ramon Oliveira</title>
 
-    <?php wp_head();  ?>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> >
@@ -35,12 +35,7 @@
             </div>
         </header>
         <nav id="list_tags">
-            <ul>
-                <li><a href="#">Tag 1</a></li>
-                <li><a href="#">Tag 2</a></li>
-                <li><a href="#">Tag 3</a></li>
-                <li><a href="#">Tag 4</a></li>
-                <li><a href="#">Tag 5</a></li>
-                <li><a href="#">Tag 6</a></li>
-            </ul>
+            <?php 
+                wp_nav_menu(['theme_location' => 'main_menu']);
+            ?>
         </nav>

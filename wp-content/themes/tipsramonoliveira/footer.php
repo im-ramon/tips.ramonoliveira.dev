@@ -20,7 +20,7 @@
         </footer>
     </div>
     <!-- --------- OTHERS --------- -->
-
+    <?php wp_footer() ?>
 </body>
 
 </html>

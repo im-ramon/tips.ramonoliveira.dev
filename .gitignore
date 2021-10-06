@@ -4,7 +4,7 @@
 /wp-content/*
 !/wp-content/themes
 /wp-content/themes/*
-!wp-content/themes/tips_ramonoliveira
+!wp-content/themes/tipsramonoliveira
 
 
 !.gitignore
