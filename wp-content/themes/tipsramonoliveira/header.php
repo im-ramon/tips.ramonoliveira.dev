@@ -24,7 +24,9 @@
         <!-- --------- HEADER --------- -->
         <header>
             <div id="logo">
-                <div id="logo_image">R</div>
+                <div id="logo_image">
+                    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                </div>
                 <div>
                     <p><strong>Ramon Oliveira</strong></p>
                 </div>

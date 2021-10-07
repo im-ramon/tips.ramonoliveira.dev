@@ -1,5 +1,4 @@
 <?php get_header() ?>
-
 <main>
     <nav id="languages">
         <div id="languages_itens">
@@ -18,17 +17,11 @@
                 the_post();
         ?>
 
-         <article class="iten python">
-            <div class="iten_img">
-                <i class="fab fa-python"></i>
-            </div>
-            <div class="iten_info">
-                <h1><?php echo get_tags() ?></h1>
-                <h1><?php the_title() ?></h1>
-                <p>Tags: <?php the_tags() ?></p>
-                <p><?php the_content() ?></p>
-            </div>
-        </article>
+            <?php 
+            
+            get_template_part('template-parts/posts');
+            
+            ?>
 
         <?php
             endwhile;

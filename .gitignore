@@ -2,8 +2,10 @@
 
 !/wp-content
 /wp-content/*
+
 !/wp-content/themes
 /wp-content/themes/*
+
 !wp-content/themes/tipsramonoliveira
 
 

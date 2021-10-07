@@ -14,5 +14,7 @@ function configuracoes(){
             'main_menu' => 'Main Menu'
         )
     );
+
+    add_theme_support('custom-header', ['height' => 255, 'width' => 440]);
 }
 add_action('after_setup_theme', 'configuracoes', 0);
