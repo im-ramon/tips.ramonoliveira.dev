@@ -7,8 +7,10 @@
         <i class="fab fa-python"></i>
     </div>
     <div class="iten_info">
-        <h1><?php the_title() ?></h1>
-        <p>Tags: <?php the_tags() ?></p>
-        <p><?php the_content() ?></p>
+        <a href="<?php the_permalink(); ?>">
+            <h1><?php the_title() ?></h1>
+            <p>Tags: <?php the_tags() ?></p>
+            <p><?php the_content() ?></p>
+        </a>
     </div>
 </article>

@@ -66,16 +66,16 @@ header {
 }
 
 #logo {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 5;
-  grid-column: 2 / 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
   background: #742f2f;
 }
 
 #search_area {
   -ms-grid-column: 7;
-  -ms-grid-column-span: 5;
-  grid-column: 7 / 12;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / 13;
   background: #50742f;
 }
 

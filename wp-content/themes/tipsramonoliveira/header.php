@@ -25,10 +25,14 @@
         <header>
             <div id="logo">
                 <div id="logo_image">
-                    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                    <a href="/tips.ramonoliveira.dev/">
+                        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                    </a>
                 </div>
                 <div>
-                    <p><strong>Ramon Oliveira</strong></p>
+                    <a href="/tips.ramonoliveira.dev/">
+                        <strong>Ramon Oliveira</strong>
+                    </a>
                 </div>
             </div>
             <div id="search_area">
@@ -36,8 +40,8 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
         </header>
-        <nav id="list_tags">
+        <!-- <nav id="list_tags">
             <?php 
                 wp_nav_menu(['theme_location' => 'main_menu']);
             ?>
-        </nav>
+        </nav> -->

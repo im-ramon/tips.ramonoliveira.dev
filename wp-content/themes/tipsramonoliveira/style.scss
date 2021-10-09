@@ -51,12 +51,12 @@ header {
 }
 
 #logo {
-    grid-column: 2 / 7;
+    grid-column: 1 / 7;
     background: #742f2f; //APAGAR
 }
 
 #search_area {
-    grid-column: 7 / 12;
+    grid-column: 7 / 13;
     background: #50742f; //APAGAR
     input {
         width: clamp(minimo, abaixo do max, max e atual);

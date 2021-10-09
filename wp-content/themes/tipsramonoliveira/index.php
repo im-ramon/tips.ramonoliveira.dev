@@ -19,7 +19,7 @@
 
             <?php 
             
-            get_template_part('template-parts/posts');
+            get_template_part('template-parts/posts-home');
             
             ?>
 
