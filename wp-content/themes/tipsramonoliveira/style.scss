@@ -7,6 +7,31 @@ Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
 Version: 1.0.0
 */
 
+// Variables
+$red: #cd0034;
+$blue: #004cdc;
+$blue-dark: #002f42;
+$white: #f5f5f5;
+$green: #005e27;
+$yellow: #d1d300;
+$black-0: #121212;
+$black-1: #010006;
+$black-2: #22272e;
+$black-3: #00090c;
+$black-4: #1d1d1d;
+$success: #00ac49;
+$danger: #e61f42;
+$warning: #ffc311;
+$info: #00a3b8;
+$dark: #333a40;
+$light: #f8f9fa;
+
+@mixin centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 * {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -18,7 +43,7 @@ body {
 }
 
 body {
-    background: #a0a0a0;
+    background: $black-0;
     width: 100%;
     height: 100%;
     padding: 8px;
@@ -34,7 +59,8 @@ body {
     height: 100%;
     padding: 1em;
     margin: 0 auto;
-    background: #222222;
+    border-radius: 10px;
+    border: 2px solid $red;
 }
 
 header {
@@ -45,9 +71,7 @@ header {
 
 #logo,
 #search_area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centro;
 }
 
 #logo {
@@ -57,14 +81,34 @@ header {
 
 #search_area {
     grid-column: 7 / 13;
-    background: #50742f; //APAGAR
+    form.search-form {
+        width: 100%;
+        height: 100%;
+        @include centro;
+        label span {
+            display: none;
+        }
+    }
+    label {
+        width: 80%;
+        @include centro;
+    }
     input {
-        width: clamp(minimo, abaixo do max, max e atual);
-        border: none;
-
+        width: 100%;
+        height: 30px;
+        border: 2px solid $red;
+        border-radius: 10px;
+        padding-left: 1em;
+        background: $black-4;
+        color: $light;
         &:focus {
             outline: 0;
         }
+    }
+
+    i {
+        color: $red;
+        font-size: 16px;
     }
 
     button {
@@ -94,23 +138,37 @@ header {
 // ------------------------- MAIN ------------------------- //
 
 #main {
-    background: #ff00ea; //APAGAR
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
 nav#languages {
-    background: #602f74; //APAGAR
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
 #languages_itens {
-    background: #042720;
     grid-column: 2 / 12;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    label {
+        width: 100px;
+        margin: 0 8px;
+        color: $light;
+        transition: border .3s ease-in-out;
+        // border-radius: 8px;
+        border-bottom: 2px solid $light;
+        // border: 2px solid $light;
+        // background: $black-4;
+        padding: 2px 8px;
+        &:hover {
+            border-bottom: 2px solid $red;
+            transition: border .3s ease-in-out;
+        }
+    }
 }
 
 section#main_content {
