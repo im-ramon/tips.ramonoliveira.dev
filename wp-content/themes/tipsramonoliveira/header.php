@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset') ?>">
     <meta name="keywords" content="Javascript, Python, Desenvolvimento, Web, Wordpress">
     <meta name="description" content="Dicas e notas pessoais">
     <meta name="author" content="Ramon Oliveira - contato@ramonoliveira.dev">
@@ -13,8 +13,6 @@
     <link rel="shortcut icon" href="img\fav_icon.png" />
 
     <script src="https://kit.fontawesome.com/d016db399d.js" crossorigin="anonymous"></script>
-
-    <title>Tips - Ramon Oliveira</title>
 
     <?php wp_head(); ?>
 </head>
@@ -36,8 +34,7 @@
                 </div>
             </div>
             <div id="search_area">
-                <input type="text">
-                <button><i class="fas fa-search"></i></button>
+                <?php get_search_form(); ?>
             </div>
         </header>
         <!-- <nav id="list_tags">

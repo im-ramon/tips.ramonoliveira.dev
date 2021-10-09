@@ -25,6 +25,7 @@
 
         <?php
             endwhile;
+            the_posts_pagination(array('prev_text' => 'Anterior', 'next_text' => 'Próximo',));
         else :
         ?>
         <p>Não há posts!</p>
