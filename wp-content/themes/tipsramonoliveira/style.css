@@ -7,8 +7,15 @@ Author URI: https://tips.ramonoliveira.dev
 Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
 Version: 1.0.0
 */
+/* ------------ Variables ------------ */
+/* ------------ Functions ------------ */
+/* ------------ Mixins ------------ */
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+p, span, strong {
+  font-size: 16px;
 }
 
 html,
@@ -18,21 +25,32 @@ body {
 }
 
 body {
-  background: #121212;
+  background: #f8f9fa;
   width: 100%;
   height: 100%;
-  padding: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body::before {
+  content: '';
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 4px;
+  width: 100%;
+  background: radial-gradient(circle, #833ab4 0%, #45c7fc 24%, #fd1d1d 51%, #fcb045 82%);
 }
 
 #root {
@@ -41,19 +59,19 @@ body {
   height: 100%;
   padding: 1em;
   margin: 0 auto;
-  border-radius: 10px;
-  border: 2px solid #cd0034;
 }
 
 header {
   display: -ms-grid;
   display: grid;
-  gap: 1em;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  background: #22272e;
+  border-bottom: 4px solid #121212;
+  width: 100%;
+  padding: 8px 0;
 }
 
-#logo,
 #search_area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,16 +85,47 @@ header {
 }
 
 #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-left: 40px;
+}
+
+#personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 40px;
+}
+
+#logo {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1 / 7;
-  background: #742f2f;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+}
+
+#logo a {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
 }
 
 #search_area {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-column: 7 / 13;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5 / 9;
 }
 
 #search_area form.search-form {
@@ -98,7 +147,7 @@ header {
 }
 
 #search_area label {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,30 +161,77 @@ header {
 
 #search_area input {
   width: 100%;
-  height: 30px;
-  border: 2px solid #cd0034;
-  border-radius: 10px;
+  height: 28px;
+  font-size: 16px;
+  border: none;
+  -webkit-box-shadow: 6px 6px 13px -3px #000000;
+          box-shadow: 6px 6px 13px -3px #000000;
+  border-radius: 40px;
   padding-left: 1em;
-  background: #1d1d1d;
-  color: #f8f9fa;
+  background: #909090;
+  text-align: center;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  color: #ffffff90;
+}
+
+#search_area input::-webkit-input-placeholder {
+  color: #ffffff90;
+}
+
+#search_area input:-ms-input-placeholder {
+  color: #ffffff90;
+}
+
+#search_area input::-ms-input-placeholder {
+  color: #ffffff90;
+}
+
+#search_area input::placeholder {
+  color: #ffffff90;
 }
 
 #search_area input:focus {
   outline: 0;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: #f8f9fa;
+  color: #121212;
 }
 
 #search_area i {
-  color: #cd0034;
+  color: #f8f9fa;
   font-size: 16px;
+  margin-left: 0.6em;
 }
 
 #search_area button {
+  cursor: pointer;
   border: none;
   background: none;
 }
 
+#personal {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9 / 13;
+}
+
+#personal * {
+  cursor: pointer;
+}
+
+#personal i {
+  font-size: 32px;
+  color: #f8f9fa;
+}
+
+#personal img.profilepic {
+  width: 32px;
+  margin-left: 1em;
+}
+
 #list_tags {
-  background: #74732f;
   width: 100%;
   margin: 0 auto;
   display: -ms-grid;
@@ -180,7 +276,7 @@ nav#languages {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2 / 12;
-  height: 45px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,16 +292,16 @@ nav#languages {
   width: 100px;
   margin: 0 8px;
   color: #f8f9fa;
-  -webkit-transition: border .3s ease-in-out;
-  transition: border .3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
   border-bottom: 2px solid #f8f9fa;
   padding: 2px 8px;
 }
 
 #languages_itens label:hover {
   border-bottom: 2px solid #cd0034;
-  -webkit-transition: border .3s ease-in-out;
-  transition: border .3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
 }
 
 section#main_content {

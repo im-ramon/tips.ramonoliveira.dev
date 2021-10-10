@@ -7,7 +7,7 @@ Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
 Version: 1.0.0
 */
 
-// Variables
+/* ------------ Variables ------------ */
 $red: #cd0034;
 $blue: #004cdc;
 $blue-dark: #002f42;
@@ -26,6 +26,12 @@ $info: #00a3b8;
 $dark: #333a40;
 $light: #f8f9fa;
 
+/* ------------ Functions ------------ */
+@function size($tamanho){
+    @return $tamanho * 8px;
+}
+
+/* ------------ Mixins ------------ */
 @mixin centro {
     display: flex;
     align-items: center;
@@ -36,6 +42,10 @@ $light: #f8f9fa;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+p, span, strong {
+    font-size: size(2);
+}
+
 html,
 body {
     margin: 0;
@@ -43,14 +53,23 @@ body {
 }
 
 body {
-    background: $black-0;
+    background: $light;
     width: 100%;
     height: 100%;
-    padding: 8px;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+
+    &::before {
+        content: '';
+        position: relative;
+        top: 0;
+        right: 0;
+        height: size(0.5);
+        width: 100%;
+        background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(69,199,252,1) 24%, rgba(253,29,29,1) 51%, rgba(252,176,69,1) 82%);
+    }
 }
 
 #root {
@@ -58,29 +77,48 @@ body {
     max-width: 1440px;
     height: 100%;
     padding: 1em;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 2px solid $red;
+    margin: 0 auto;  
 }
 
 header {
     display: grid;
-    gap: 1em;
     grid-template-columns: repeat(12, 1fr);
+    background: $black-2;
+    border-bottom: 4px solid $black-0;
+    width: 100%;
+    padding: size(1) 0;
 }
 
-#logo,
-#search_area {
+#search_area{
     @include centro;
 }
 
 #logo {
-    grid-column: 1 / 7;
-    background: #742f2f; //APAGAR
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: size(5);
+
+}
+#personal {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: size(5);
+}
+
+#logo {
+    grid-column: 1 / 5;
+
+    a {
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+    }
 }
 
 #search_area {
-    grid-column: 7 / 13;
+    grid-column: 5 / 9;
     form.search-form {
         width: 100%;
         height: 100%;
@@ -90,35 +128,63 @@ header {
         }
     }
     label {
-        width: 80%;
+        width: 100%;
         @include centro;
     }
     input {
         width: 100%;
-        height: 30px;
-        border: 2px solid $red;
-        border-radius: 10px;
+        height: size(3.5);
+        font-size: size(2);
+        border: none;
+        box-shadow: 6px 6px 13px -3px #000000;
+        border-radius: size(5);
         padding-left: 1em;
-        background: $black-4;
-        color: $light;
+        background: #909090;
+        text-align: center;
+        transition: background 0.3s ease-in-out;
+        color: #ffffff90;
+        &::placeholder {
+            color: #ffffff90;
+        }
         &:focus {
             outline: 0;
+            transition: background 0.3s ease-in-out;
+            background: $light;
+            color: $black-0;
         }
     }
 
     i {
-        color: $red;
-        font-size: 16px;
+        color: $light;
+        font-size: size(2);
+        margin-left: 0.6em;
     }
 
     button {
+        cursor: pointer;
         border: none;
         background: none;
     }
 }
 
+#personal {
+    grid-column: 9 / 13;
+    * {
+        cursor: pointer;
+    }
+
+    i {
+        font-size: size(4);
+        color: $light;
+    }
+
+    img.profilepic {
+        width: size(4);
+        margin-left: 1em;
+    }
+}
+
 #list_tags {
-    background: #74732f; //APAGAR
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -149,7 +215,7 @@ nav#languages {
 
 #languages_itens {
     grid-column: 2 / 12;
-    height: 45px;
+    height: size(5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,15 +224,12 @@ nav#languages {
         width: 100px;
         margin: 0 8px;
         color: $light;
-        transition: border .3s ease-in-out;
-        // border-radius: 8px;
+        transition: border 0.3s ease-in-out;
         border-bottom: 2px solid $light;
-        // border: 2px solid $light;
-        // background: $black-4;
         padding: 2px 8px;
         &:hover {
             border-bottom: 2px solid $red;
-            transition: border .3s ease-in-out;
+            transition: border 0.3s ease-in-out;
         }
     }
 }

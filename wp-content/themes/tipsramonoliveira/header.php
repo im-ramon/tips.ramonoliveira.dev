@@ -17,28 +17,28 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
+    <!-- --------- HEADER --------- -->
+    <header>
+        <div id="logo">
+            <a href="/tips.ramonoliveira.dev/">
+                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+            </a>
+        </div>
+
+        <div id="search_area">
+            <?php get_search_form(); ?>
+        </div>
+
+        <div id="personal">
+            <a href="https://instagram.com/i.m.ramon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <img class="profilepic" src="wp-content/themes/tipsramonoliveira/images/profile-pic.png" alt="Foto do perfil" title="Portifólio">
+        </div>
+    </header>
+
     <div id="root">
-        <!-- --------- HEADER --------- -->
-        <header>
-            <div id="logo">
-                <div id="logo_image">
-                    <a href="/tips.ramonoliveira.dev/">
-                        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-                    </a>
-                </div>
-                <div>
-                    <a href="/tips.ramonoliveira.dev/">
-                        <strong>Ramon Oliveira</strong>
-                    </a>
-                </div>
-            </div>
-            <div id="search_area">
-                <?php get_search_form(); ?>
-            </div>
-        </header>
         <!-- <nav id="list_tags">
-            <?php 
-                wp_nav_menu(['theme_location' => 'main_menu']);
+            <?php
+            wp_nav_menu(['theme_location' => 'main_menu']);
             ?>
         </nav> -->

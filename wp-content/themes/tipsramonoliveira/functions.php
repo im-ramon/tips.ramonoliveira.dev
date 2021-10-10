@@ -15,7 +15,7 @@ function configuracoes(){
         )
     );
 
-    add_theme_support('custom-header', ['height' => 255, 'width' => 440]);
+    add_theme_support('custom-header', ['height' => 50, 'width' => 236]);
     add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'configuracoes', 0);
