@@ -79,13 +79,27 @@ body {
             rgba(252, 176, 69, 1) 82%
         );
     }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $black-2;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $light;
+        border-radius: 20px;
+        border: 3px solid $black-3;
+    }
 }
 
 #root {
-    width: 100%;
+    width: 98%;
+    padding: 1em 0;
     max-width: 1440px;
     height: 100%;
-    padding: 1em;
     margin: 0 auto;
 }
 
