@@ -202,6 +202,13 @@ header {
 }
 
 // ------------------------- MAIN ------------------------- //
+#banner {
+    border-radius: size(2);
+    border: 2px solid grey;
+    width: 100%;
+    height: 400px;
+    @include centro();
+}
 
 #main {
     display: grid;
@@ -211,24 +218,55 @@ header {
 nav#languages {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    h3 { 
+        text-align: center;
+        text-transform: uppercase;
+        // border-top: 2px dashed #00000030;
+        // border-bottom: 2px dashed #00000030;
+        width: 100%;
+        padding: size(.5) 0;
+    }
 }
 
-#languages_itens {
+#languages_area {
     grid-column: 2 / 12;
-    height: size(5);
+    padding: size(2);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
     label {
-        width: 100px;
-        margin: 0 8px;
-        color: $light;
+        min-width: 50px;
+        margin: size(1);
+        color: $dark;
+        text-align: center;
         transition: border 0.3s ease-in-out;
         border-bottom: 2px solid $light;
         padding: 2px 8px;
+        border-top-left-radius: size(.5);
+        border-top-right-radius: size(.5);
+        background: #00000010;
+
+        &:nth-child(1n) {
+            border-color: $success;
+        }
+        &:nth-child(2n) {
+            border-color: $warning;
+        }
+        &:nth-child(3n) {
+            border-color: $info;
+        }
+        &:nth-child(4n) {
+            border-color: $danger;
+        }
+        &:nth-child(4n) {
+            border-color: tomato;
+        }
+
         &:hover {
-            border-bottom: 2px solid $red;
+            border-color: $dark;
             transition: border 0.3s ease-in-out;
         }
     }

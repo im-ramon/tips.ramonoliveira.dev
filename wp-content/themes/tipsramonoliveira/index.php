@@ -1,11 +1,29 @@
 <?php get_header() ?>
 <main>
     <nav id="languages">
-        <div id="languages_itens">
+        <div id="languages_area">
+            <h3>Escolha uma tecnologia</h3>
             <label><input type="checkbox" name="languages" value="Todos">Todos</label>
             <label><input type="checkbox" name="languages" value="HTML">HTML</label>
             <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
             <label><input type="checkbox" name="languages" value="JS">Javascript</label>
+            <label><input type="checkbox" name="languages" value="JS">Javascript</label>
+            <label><input type="checkbox" name="languages" value="JS">Javascript</label>
+            <label><input type="checkbox" name="languages" value="Python">Python</label>
+            <label><input type="checkbox" name="languages" value="Python">Python</label>
+            
+            <label><input type="checkbox" name="languages" value="Todos">Todos</label>
+            <label><input type="checkbox" name="languages" value="HTML">HTML</label>
+            <label><input type="checkbox" name="languages" value="HTML">HTML</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="CSS">CSS</label>
+            <label><input type="checkbox" name="languages" value="JS">Javascript</label>
+            <label><input type="checkbox" name="languages" value="Python">Python</label>
+            <label><input type="checkbox" name="languages" value="Python">Python</label>
             <label><input type="checkbox" name="languages" value="Python">Python</label>
         </div>
     </nav>

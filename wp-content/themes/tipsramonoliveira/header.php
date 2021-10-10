@@ -37,6 +37,9 @@
     </header>
 
     <div id="root">
+        <section id="banner">
+            <p>Banner aqui...</p>
+        </section>
         <!-- <nav id="list_tags">
             <?php
             wp_nav_menu(['theme_location' => 'main_menu']);
