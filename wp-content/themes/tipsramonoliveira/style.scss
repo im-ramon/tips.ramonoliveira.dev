@@ -25,9 +25,10 @@ $warning: #ffc311;
 $info: #00a3b8;
 $dark: #333a40;
 $light: #f8f9fa;
+$white-inactive: #ffffff90;
 
 /* ------------ Functions ------------ */
-@function size($tamanho){
+@function size($tamanho) {
     @return $tamanho * 8px;
 }
 
@@ -42,7 +43,9 @@ $light: #f8f9fa;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-p, span, strong {
+p,
+span,
+strong {
     font-size: size(2);
 }
 
@@ -62,13 +65,19 @@ body {
     justify-content: center;
 
     &::before {
-        content: '';
+        content: "";
         position: relative;
         top: 0;
         right: 0;
         height: size(0.5);
         width: 100%;
-        background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(69,199,252,1) 24%, rgba(253,29,29,1) 51%, rgba(252,176,69,1) 82%);
+        background: radial-gradient(
+            circle,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(69, 199, 252, 1) 24%,
+            rgba(253, 29, 29, 1) 51%,
+            rgba(252, 176, 69, 1) 82%
+        );
     }
 }
 
@@ -77,7 +86,7 @@ body {
     max-width: 1440px;
     height: 100%;
     padding: 1em;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
 header {
@@ -89,7 +98,7 @@ header {
     padding: size(1) 0;
 }
 
-#search_area{
+#search_area {
     @include centro;
 }
 
@@ -98,7 +107,6 @@ header {
     align-items: center;
     justify-content: start;
     padding-left: size(5);
-
 }
 #personal {
     display: flex;
@@ -142,9 +150,9 @@ header {
         background: #909090;
         text-align: center;
         transition: background 0.3s ease-in-out;
-        color: #ffffff90;
+        color: $white-inactive;
         &::placeholder {
-            color: #ffffff90;
+            color: $white-inactive;
         }
         &:focus {
             outline: 0;
@@ -219,13 +227,13 @@ nav#languages {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
-    h3 { 
+    h3 {
         text-align: center;
         text-transform: uppercase;
         // border-top: 2px dashed #00000030;
         // border-bottom: 2px dashed #00000030;
         width: 100%;
-        padding: size(.5) 0;
+        padding: size(0.5) 0;
     }
 }
 
@@ -245,8 +253,8 @@ nav#languages {
         transition: border 0.3s ease-in-out;
         border-bottom: 2px solid $light;
         padding: 2px 8px;
-        border-top-left-radius: size(.5);
-        border-top-right-radius: size(.5);
+        border-top-left-radius: size(0.5);
+        border-top-right-radius: size(0.5);
         background: #00000010;
 
         &:nth-child(1n) {
@@ -337,24 +345,72 @@ section#main_content article:nth-child(4n) {
 
 // ------------------------- FOOTER ------------------------- //
 footer {
+    border-radius: size(2);
+    padding: size(0.5);
+    background: radial-gradient(
+            circle,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(69, 199, 252, 1) 24%,
+            rgba(253, 29, 29, 1) 51%,
+            rgba(252, 176, 69, 1) 82%
+        );
+}
+#footer-area {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background: rgb(56, 31, 22);
+    background: $black-2;
+    border-radius: size(2);
     gap: 1em;
+    color: $light;
 
     #infop {
-        background: crimson;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        padding: size(2) 0;
+        cursor: default;
+
+        span {
+            font-size: size(2);
+        }
+
+        img {
+            width: size(10);
+            margin-bottom: size(1);
+        }
     }
 
     #social {
-        background: cornflowerblue;
+        @include centro();
+        flex-direction: column;
+
+        section {
+            @include centro();
+            height: 30%;
+        }
+
+        i {
+            font-size: size(3);
+            color: $white-inactive;
+            margin: 0 size(1);
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transition: all 0.2s ease-in-out;
+                color: $light;
+            }
+        }
     }
 
     #copyright {
-        background: hotpink;
+        @include centro();
+        flex-direction: column;
+
+        a {
+            text-decoration: none;
+            color: $light;
+        }
     }
 
     display: grid;

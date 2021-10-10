@@ -2,7 +2,7 @@
 <main>
     <nav id="languages">
         <div id="languages_area">
-            <h3>Escolha umas tecnologia</h3>
+            <h3>Escolha uma tecnologia</h3>
             <label><input type="checkbox" name="languages" value="Todos">Todos</label>
             <label><input type="checkbox" name="languages" value="HTML">HTML</label>
             <label><input type="checkbox" name="languages" value="CSS">CSS</label>
