@@ -38,7 +38,7 @@
 
     <div id="root">
         <section id="banner">
-            <p>Banner aqui...</p>
+            <?php get_template_part('template-parts/banner'); ?>
         </section>
         <!-- <nav id="list_tags">
             <?php

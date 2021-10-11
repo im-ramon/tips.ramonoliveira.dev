@@ -9,6 +9,28 @@ Version: 1.0.0
 */
 /* ------------ Variables ------------ */
 /* ------------ Functions ------------ */
+/* ------------ Animations ------------ */
+@-webkit-keyframes moveBall {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-3em);
+    transform: translateY(-3em);
+  }
+}
+@keyframes moveBall {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-3em);
+    transform: translateY(-3em);
+  }
+}
+
 /* ------------ Mixins ------------ */
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -279,15 +301,63 @@ header {
   border: 2px solid grey;
   width: 100%;
   height: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16fr 14fr;
+      grid-template-columns: 16fr 14fr;
+}
+
+#banner #icons {
+  position: relative;
+}
+
+#banner #icons img {
+  width: 70px;
+  position: absolute;
+}
+
+#banner #icons img.laptop {
+  width: 600px;
+  z-index: 2;
+}
+
+#banner #icons .javascript {
+  bottom: 0;
+  left: 320px;
+  -webkit-animation: moveBall 5s ease-in-out 2s infinite alternate;
+          animation: moveBall 5s ease-in-out 2s infinite alternate;
+  z-index: 3;
+}
+
+#banner #icons .css {
+  bottom: 30px;
+  left: 10px;
+  -webkit-animation: moveBall 3s ease-in-out 1s infinite alternate;
+          animation: moveBall 3s ease-in-out 1s infinite alternate;
+  z-index: 3;
+}
+
+#banner #icons .html {
+  bottom: 300px;
+  left: 150px;
+  -webkit-animation: moveBall 4s ease-in-out 2s infinite alternate;
+          animation: moveBall 4s ease-in-out 2s infinite alternate;
+}
+
+#banner #icons .python {
+  bottom: 292px;
+  left: 400px;
+  -webkit-animation: moveBall 3s ease-in-out 1s infinite alternate;
+          animation: moveBall 3s ease-in-out 1s infinite alternate;
+  z-index: 1;
+}
+
+#banner #icons .react {
+  bottom: 140px;
+  left: 80px;
+  -webkit-animation: moveBall 10s ease-in-out 0s infinite alternate;
+          animation: moveBall 10s ease-in-out 0s infinite alternate;
+  z-index: 1;
 }
 
 #main {

@@ -32,6 +32,18 @@ $white-inactive: #ffffff90;
     @return $tamanho * 8px;
 }
 
+/* ------------ Animations ------------ */
+@keyframes moveBall {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-3em);
+              transform: translateY(-3em);
+    }
+  }
+
 /* ------------ Mixins ------------ */
 @mixin centro {
     display: flex;
@@ -229,7 +241,57 @@ header {
     border: 2px solid grey;
     width: 100%;
     height: 400px;
-    @include centro();
+    display: grid;
+    grid-template-columns: 16fr 14fr;
+
+    #icons {
+        position: relative;
+
+        img {
+            width: 70px;
+            position: absolute;
+        }
+        
+        img.laptop {
+            width: 600px;
+            z-index: 2;
+        }
+
+        .javascript {
+            bottom: 0;
+            left: 320px;
+            animation: moveBall 5s ease-in-out 2s infinite alternate;
+            z-index: 3;
+        }
+        
+        .css {
+            bottom: 30px;
+            left: 10px;
+            animation: moveBall 3s ease-in-out 1s infinite alternate;
+            z-index: 3;
+        }
+        
+        .html {
+            bottom: 300px;
+            left: 150px;
+            animation: moveBall 4s ease-in-out 2s infinite alternate;
+        }
+        
+        .python {
+            bottom: 292px;
+            left: 400px;
+            animation: moveBall 3s ease-in-out 1s infinite alternate;
+            z-index: 1;
+        }
+        
+        .react {
+            bottom: 140px;
+            left: 80px;
+            animation: moveBall 10s ease-in-out 0s infinite alternate;
+            z-index: 1;
+        }
+        
+    }
 }
 
 #main {
