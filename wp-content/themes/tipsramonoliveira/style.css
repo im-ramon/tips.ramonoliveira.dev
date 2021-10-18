@@ -32,6 +32,15 @@ Version: 1.0.0
 }
 
 /* ------------ Mixins ------------ */
+/* ------------ Global Classes ------------ */
+.hidden {
+  display: none;
+}
+
+.invisible {
+  opacity: 0%;
+}
+
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -305,6 +314,7 @@ header {
   display: grid;
   -ms-grid-columns: 16fr 14fr;
       grid-template-columns: 16fr 14fr;
+  margin: 0 0 32px 0;
 }
 
 #banner #icons {
@@ -440,7 +450,6 @@ nav#languages h3 {
 }
 
 section#main_content {
-  background: chocolate;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,51 +464,19 @@ section#main_content {
 }
 
 section#main_content article {
-  grid-column: span 3;
-  background: #4b3220;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 0.2em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section#main_content .iten_info {
-  background: crimson;
-  padding: 0 1.2em;
-  overflow: hidden;
-  height: 60px;
-}
-
-section#main_content .iten_info h1,
-section#main_content .iten_info p {
-  margin: 0;
-  padding: 0;
-}
-
-section#main_content .iten_img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section#main_content article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 1fr;
+      grid-template-columns: 60px 1fr;
   margin: 0.5em 1em;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  background: #22272e;
+  padding: 8px;
+  height: 56px;
+  border-radius: 8px;
 }
 
 section#main_content article:hover {
@@ -512,24 +489,48 @@ section#main_content article:hover {
   cursor: pointer;
 }
 
-section#main_content article:nth-child(1n) {
-  width: 150px;
-  background: #002fff;
-}
-
 section#main_content article:nth-child(2n) {
-  width: 250px;
-  background: red;
+  max-width: 280px;
 }
 
-section#main_content article:nth-child(3n) {
-  width: 300px;
-  background: #fffb00;
+section#main_content .iten_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-section#main_content article:nth-child(4n) {
-  width: 500x;
-  background: #f700ff;
+section#main_content .iten_img img {
+  width: 40px;
+}
+
+section#main_content .iten_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1.2em;
+  overflow: hidden;
+  max-width: 360px;
+}
+
+section#main_content .iten_info h1,
+section#main_content .iten_info p, section#main_content .iten_info a {
+  margin: 0;
+  padding: 0;
+  color: #f8f9fa;
+  font-weight: 100;
+  text-decoration: none;
 }
 
 footer {
@@ -676,9 +677,5 @@ footer {
     width: 80%;
     background: #f700ff;
   }
-}
-
-.python i {
-  font-size: 5em;
 }
 /*# sourceMappingURL=style.css.map */

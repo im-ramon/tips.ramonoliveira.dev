@@ -1,10 +1,10 @@
-<article id="<?php the_ID(); ?>" class="iten <?php 
-    foreach(get_the_category() as $category) {
-        echo strtolower($category->name);
-     }
-?>">
+<article id="<?php the_ID(); ?>" class="iten">
     <div class="iten_img">
-        <i class="fab fa-python"></i>
+        <i class="fab fa-<?php
+                            foreach (get_the_category() as $category) {
+                                echo strtolower($category->name);
+                            }
+                            ?>"></i>
     </div>
     <div class="iten_info">
         <a href="<?php the_permalink(); ?>">
