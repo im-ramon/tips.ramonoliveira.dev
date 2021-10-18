@@ -391,7 +391,7 @@ section#main_content {
         transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
         background: $black-2;
         padding: size(1);
-        height: size(7);
+        height: size(8);
         border-radius: size(1);
 
         &:hover {
@@ -528,6 +528,11 @@ footer {
 }
 
 // ------------------------- POSTS ------------------------- //
+.post_body {
+    background: $light;
+    border-radius: size(2);
+}
+
 .post_title {
     // background: $black-2;
     font-weight: 900;

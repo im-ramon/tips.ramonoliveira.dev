@@ -36,7 +36,7 @@
         </div>
 
         <div id="personal">
-            <a href="https://instagram.com/i.m.ramon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/i.m.ramon" title="Instagram"><i class="fab fa-whatsapp"></i></a>
             <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Portifólio">
         </div>
     </header>

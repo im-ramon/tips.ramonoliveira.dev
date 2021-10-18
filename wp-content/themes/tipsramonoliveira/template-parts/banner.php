@@ -1,7 +1,7 @@
 <section id="texto">
     <h1>Bem vindo!</h1>
     <h2>Aproveite meu acevo pessaol de anotações.</h2>
-    <p>Encontre dicas e tutorias diretos, rápidos e descomplicados sobre diversas tecnlogias. Esses são resultados de diversas anotações e resumos realizados em alguns anos estudando.</p>
+    <p>Encontre dicas e tutorias diretos, rápidos e descomplicados sobre diversas tecnologias. Esses são resultados de diversas anotações e resumos realizados em alguns anos estudando.</p>
     <br>
     <p><strong>Agora que você entendeu onde está, vamos começar...</strong></p>
    

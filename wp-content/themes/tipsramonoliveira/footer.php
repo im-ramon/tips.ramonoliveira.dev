@@ -1,7 +1,7 @@
 <footer>
     <div id="footer-area">
         <div id="infop">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-simple.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/svg/logo.svg" alt="Logo">
 
             <span>Ramon Oliveira</span>
             <span><i class="fas fa-rocket"></i> Desenvolvedor Web</span>

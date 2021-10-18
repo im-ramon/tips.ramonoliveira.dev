@@ -488,7 +488,7 @@ section#main_content article {
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
   background: #22272e;
   padding: 8px;
-  height: 56px;
+  height: 64px;
   border-radius: 8px;
 }
 
@@ -678,6 +678,11 @@ footer {
 #footer-area #copyright a {
   text-decoration: none;
   color: #f8f9fa;
+}
+
+.post_body {
+  background: #f8f9fa;
+  border-radius: 16px;
 }
 
 .post_title {
