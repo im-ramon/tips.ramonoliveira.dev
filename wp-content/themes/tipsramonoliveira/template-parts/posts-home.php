@@ -9,10 +9,10 @@
                             echo strtolower($category->name);
                         }
                         ?>" src="<?php echo get_template_directory_uri(); ?>/svg/<?php
-                                                                                                                foreach (get_the_category() as $category) {
-                                                                                                                    echo strtolower($category->name);
-                                                                                                                }
-                                                                                                                ?>.svg" alt="python">
+                                            foreach (get_the_category() as $category) {
+                                                echo strtolower($category->name);
+                                            }
+                                            ?>.svg" alt="python">
     </div>
     <div class="iten_info">
         <a href="<?php the_permalink(); ?>">

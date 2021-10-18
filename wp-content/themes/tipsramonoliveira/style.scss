@@ -73,7 +73,7 @@ body {
 
 body {
     background: url(images/backgound-pattern.png) $light;
-    background-size: 10%;
+    background-size: size(20);
     width: 100%;
     height: 100%;
     display: flex;
@@ -586,6 +586,10 @@ footer {
         text-indent: size(5);
         text-align: justify;
     }
+}
+
+.img_logo_title {
+    width: size(2);
 }
 // ------------------------- COMMENTS ------------------------- //
 #comments {
