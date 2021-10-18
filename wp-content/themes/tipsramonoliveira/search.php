@@ -10,7 +10,9 @@
 
             <?php 
             
-            get_template_part('template-parts/posts-finded');
+            if( has_category()):
+                get_template_part('template-parts/posts-finded');
+            endif;
             
             ?>
 

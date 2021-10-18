@@ -62,7 +62,6 @@ $white-inactive: #ffffff90;
 
 * {
     font-family: "Lato", sans-serif;
-    font-weight: 600;
     // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
@@ -73,7 +72,8 @@ body {
 }
 
 body {
-    background: $light;
+    background: url(images/backgound-pattern.png) $light;
+    background-size: 10%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -249,6 +249,7 @@ main {
     border: 2px dashed rgba(128, 128, 128, 0.527);
     width: 100%;
     height: 400px;
+    background: $light;
     display: grid;
     grid-template-columns: 16fr 14fr;
     margin: 0 0 size(4) 0;
@@ -333,6 +334,7 @@ nav#languages {
 }
 
 #languages_area {
+    font-weight: 600;
     grid-column: 2 / 12;
     padding: size(2);
     display: flex;
@@ -350,7 +352,7 @@ nav#languages {
         padding: 2px 8px;
         border-top-left-radius: size(0.5);
         border-top-right-radius: size(0.5);
-        background: #00000010;
+        background: #e8e9ea;
 
         &:nth-child(1n) {
             border-color: $success;
@@ -376,6 +378,7 @@ nav#languages {
 }
 
 section#main_content {
+    font-weight: 300;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -423,10 +426,13 @@ section#main_content {
             margin: 0;
             padding: 0;
             color: $light;
-            font-weight: 100;
             text-decoration: none;
         }
     }
+}
+
+.iten.sem.categoria {
+    border: 2px solid #000;
 }
 
 .python {
@@ -448,6 +454,7 @@ section#main_content {
 // ------------------------- FOOTER ------------------------- //
 footer {
     border-radius: size(2);
+    font-weight: 300;
     padding: size(0.5);
     background: radial-gradient(
         circle,
@@ -522,31 +529,33 @@ footer {
 
 // ------------------------- POSTS ------------------------- //
 .post_title {
-    background: $black-2;
-    color: $light;
+    // background: $black-2;
+    font-weight: 900;
+    color: $black-2;
     padding: size(1) size(2);
     text-transform: uppercase;
-    border-radius: size(1);
-    border-bottom: 2px solid $red;
+    border-bottom: 2px solid $black-2;
 }
 
 .post_info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border-bottom: 3px double $black-2;
     padding: 0 size(3) size(2) 0;
 }
 
 .post_date {
     font-style: italic;
+    font-weight: 300;
 }
 
 .post_author {
     font-style: italic;
+    font-weight: 300;
     a {
         color: $red;
         text-decoration: none;
+        font-weight: 500;
 
         &:hover {
             text-decoration: underline;
@@ -558,7 +567,7 @@ footer {
     a {
         color: $red;
         text-decoration: none;
-        
+
         &:hover {
             text-decoration: underline;
         }
@@ -567,11 +576,110 @@ footer {
 
 .post_content {
     margin-top: size(2);
+    font-weight: 500;
     p {
         text-indent: size(5);
         text-align: justify;
     }
 }
+// ------------------------- COMMENTS ------------------------- //
+#comments {
+    padding: size(2);
+    border: 2px solid $dark;
+    margin: size(2) 0;
+    border-radius: size(2);
+    background: rgba(197, 197, 197, .2);
+}
+#reply-title {
+    text-align: center;
+}
+.comment-form-comment {
+    text-align: center;
+    
+    label {
+        font-size: size(2);
+    }
+}
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border-radius: size(2);
+    text-indent: size(2);
+    padding: size(1);
+    box-sizing: border-box;
+}
+input[type="text"] {
+    width: 50%;
+    border-radius: size(2);
+    text-indent: size(2);
+    padding: size(.5);
+}
+
+input[type="submit"] {
+    background: $black-2;
+    color: $light;
+    border-radius: size(2);
+    cursor: pointer;
+    padding: size(1) size(2);
+    transition: transform .3s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1);
+        transition: transform .3s ease-in-out;
+    }
+}
+
+.comment {
+    background: #00000010;
+    border: 2px dashed #00000010;
+    margin: size(2) 0;
+    padding: size(2);
+    box-sizing: border-box;
+    border-radius: size(2);
+
+    .avatar {
+        border-radius: size(2); 
+        margin-right: size(2);
+    }
+
+    .says {
+        margin-left: size(1);
+    }
+
+    .comment-author {
+        display: flex;
+        align-items: center;
+    }
+
+    .commentmetadata {
+        a {
+            text-decoration: none;
+            color: $red;
+        }
+    }
+}
+
+.comment-reply-link {
+    background: $black-2;
+    color: $light;
+    border-radius: size(2);
+    cursor: pointer;
+    padding: size(1) size(2);
+    transition: transform .3s ease-in-out;
+    text-decoration: none;
+    
+    &:hover {
+        transform: scale(10) !important;
+        transition: transform .3s ease-in-out;
+    }
+}
+
+.form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 // ------------------------- RESPONSIVE ------------------------- //
 @media (max-width: 576px) {
