@@ -37,7 +37,7 @@
 
         <div id="personal">
             <a href="https://instagram.com/i.m.ramon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <img class="profilepic" src="wp-content/themes/tipsramonoliveira/images/profile-pic.png" alt="Foto do perfil" title="Portifólio">
+            <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Portifólio">
         </div>
     </header>
 

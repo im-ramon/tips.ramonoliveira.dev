@@ -42,7 +42,7 @@ Version: 1.0.0
 }
 
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
 }
 
@@ -317,7 +317,7 @@ main {
 }
 
 #banner h1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 64px;
   margin: 24px 0;
 }
@@ -671,6 +671,65 @@ footer {
 #footer-area #copyright a {
   text-decoration: none;
   color: #f8f9fa;
+}
+
+.post_title {
+  background: #22272e;
+  color: #f8f9fa;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border-bottom: 2px solid #cd0034;
+}
+
+.post_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 3px double #22272e;
+  padding: 0 24px 16px 0;
+}
+
+.post_date {
+  font-style: italic;
+}
+
+.post_author {
+  font-style: italic;
+}
+
+.post_author a {
+  color: #cd0034;
+  text-decoration: none;
+}
+
+.post_author a:hover {
+  text-decoration: underline;
+}
+
+.post_tags a {
+  color: #cd0034;
+  text-decoration: none;
+}
+
+.post_tags a:hover {
+  text-decoration: underline;
+}
+
+.post_content {
+  margin-top: 16px;
+}
+
+.post_content p {
+  text-indent: 40px;
+  text-align: justify;
 }
 
 @media (max-width: 576px) {

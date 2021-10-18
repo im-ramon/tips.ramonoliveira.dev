@@ -8,7 +8,7 @@
                         foreach (get_the_category() as $category) {
                             echo strtolower($category->name);
                         }
-                        ?>" src="wp-content/themes/tipsramonoliveira/svg/<?php
+                        ?>" src="<?php echo get_template_directory_uri(); ?>/svg/<?php
                                                                                                                 foreach (get_the_category() as $category) {
                                                                                                                     echo strtolower($category->name);
                                                                                                                 }
