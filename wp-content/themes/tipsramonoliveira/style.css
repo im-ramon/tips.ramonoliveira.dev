@@ -42,13 +42,8 @@ Version: 1.0.0
 }
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-p,
-span,
-strong {
-  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
 }
 
 html,
@@ -305,9 +300,13 @@ header {
       justify-content: space-around;
 }
 
+main {
+  margin-bottom: 40px;
+}
+
 #banner {
   border-radius: 16px;
-  border: 2px solid grey;
+  border: 2px dashed rgba(128, 128, 128, 0.527);
   width: 100%;
   height: 400px;
   display: -ms-grid;
@@ -315,6 +314,12 @@ header {
   -ms-grid-columns: 16fr 14fr;
       grid-template-columns: 16fr 14fr;
   margin: 0 0 32px 0;
+}
+
+#banner h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 64px;
+  margin: 24px 0;
 }
 
 #banner #icons {
@@ -327,11 +332,11 @@ header {
 }
 
 #banner #icons img.laptop {
-  width: 600px;
+  width: 550px;
   z-index: 2;
 }
 
-#banner #icons .javascript {
+#banner #icons .circle_javascript {
   bottom: 0;
   left: 320px;
   -webkit-animation: moveBall 5s ease-in-out 2s infinite alternate;
@@ -339,7 +344,7 @@ header {
   z-index: 3;
 }
 
-#banner #icons .css {
+#banner #icons .circle_css {
   bottom: 30px;
   left: 10px;
   -webkit-animation: moveBall 3s ease-in-out 1s infinite alternate;
@@ -347,14 +352,14 @@ header {
   z-index: 3;
 }
 
-#banner #icons .html {
+#banner #icons .circle_html {
   bottom: 300px;
   left: 150px;
   -webkit-animation: moveBall 4s ease-in-out 2s infinite alternate;
           animation: moveBall 4s ease-in-out 2s infinite alternate;
 }
 
-#banner #icons .python {
+#banner #icons .circle_python {
   bottom: 292px;
   left: 400px;
   -webkit-animation: moveBall 3s ease-in-out 1s infinite alternate;
@@ -362,12 +367,17 @@ header {
   z-index: 1;
 }
 
-#banner #icons .react {
+#banner #icons .circle_react {
   bottom: 140px;
   left: 80px;
   -webkit-animation: moveBall 10s ease-in-out 0s infinite alternate;
           animation: moveBall 10s ease-in-out 0s infinite alternate;
   z-index: 1;
+}
+
+#banner #texto {
+  overflow: hidden;
+  padding: 48px;
 }
 
 #main {
@@ -469,10 +479,10 @@ section#main_content article {
   -ms-grid-columns: 60px 1fr;
       grid-template-columns: 60px 1fr;
   margin: 0.5em 1em;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
   background: #22272e;
   padding: 8px;
   height: 56px;
@@ -482,11 +492,13 @@ section#main_content article {
 section#main_content article:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: -webkit-transform 0.05s ease-in-out;
-  transition: -webkit-transform 0.05s ease-in-out;
-  transition: transform 0.05s ease-in-out;
-  transition: transform 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
   cursor: pointer;
+  -webkit-box-shadow: 11px 7px 19px 0px #00000050;
+          box-shadow: 11px 7px 19px 0px #00000050;
 }
 
 section#main_content article:nth-child(2n) {
@@ -525,12 +537,29 @@ section#main_content .iten_info {
 }
 
 section#main_content .iten_info h1,
-section#main_content .iten_info p, section#main_content .iten_info a {
+section#main_content .iten_info p,
+section#main_content .iten_info a {
   margin: 0;
   padding: 0;
   color: #f8f9fa;
   font-weight: 100;
   text-decoration: none;
+}
+
+.python {
+  border: 2px solid #26759a;
+}
+
+.html5 {
+  border: 2px solid #eb5e29;
+}
+
+.javascript {
+  border: 2px solid #f8df1e;
+}
+
+.wordpress {
+  border: 2px solid #26759a;
 }
 
 footer {
