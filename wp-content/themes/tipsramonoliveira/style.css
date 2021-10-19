@@ -33,8 +33,13 @@ Version: 1.0.0
 
 /* ------------ Mixins ------------ */
 /* ------------ Global Classes ------------ */
+.show-grid {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .invisible {

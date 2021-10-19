@@ -52,8 +52,12 @@ $white-inactive: #ffffff90;
 }
 
 /* ------------ Global Classes ------------ */
+.show-grid {
+    display: grid !important;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .invisible {
