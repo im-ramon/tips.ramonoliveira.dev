@@ -27,7 +27,7 @@
     <header>
         <div id="logo">
             <a href="/tips.ramonoliveira.dev/">
-                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="Logo Ramon Oliveira" />
             </a>
         </div>
 
@@ -36,7 +36,7 @@
         </div>
 
         <div id="personal">
-            <a href="https://instagram.com/i.m.ramon" title="Instagram"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/i.m.ramon" target="_BLANK" title="Instagram"><i class="fab fa-whatsapp"></i></a>
             <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Portifólio">
         </div>
     </header>

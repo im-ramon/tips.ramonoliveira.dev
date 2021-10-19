@@ -6,13 +6,13 @@
     <nav id="languages">
         <div id="languages_area">
             <h3>Escolha uma tecnologia</h3>
-            <label><input type="radio" class="selectlang 'show-grid" id="checkbox-all" name="languages" value="all" checked>Todos</label>
+            <label class="all"><input type="radio" class="selectlang 'show-grid" id="checkbox-all" name="languages" value="all" checked>Todos</label>
             <?php foreach (get_categories() as $category) { 
                 if ($category->name == 'Sem categoria'):
                     continue;
                 endif;
                 ?>
-                <label><input type="radio" class="selectlang"  id="checkbox-<?php echo strtolower($category->name); ?>"  name="languages" value="<?php echo strtolower($category->name); ?>"><?php echo $category->name; ?></label>
+                <label class="<?php echo strtolower($category->name); ?>"><input type="radio" class="selectlang"  id="checkbox-<?php echo strtolower($category->name); ?>"  name="languages" value="<?php echo strtolower($category->name); ?>"><?php echo $category->name; ?></label>
             <?php } ?>
         </div>
     </nav>
