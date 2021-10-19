@@ -241,12 +241,12 @@ header {
 #personal::after {
     content: "";
     background: radial-gradient(
-            circle,
-            rgba(131, 58, 180, 1) 0%,
-            rgba(69, 199, 252, 1) 24%,
-            rgba(253, 29, 29, 1) 51%,
-            rgba(252, 176, 69, 1) 82%
-        );
+        circle,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(69, 199, 252, 1) 24%,
+        rgba(253, 29, 29, 1) 51%,
+        rgba(252, 176, 69, 1) 82%
+    );
     width: 50px;
     border-radius: 100%;
     height: 50px;
@@ -255,7 +255,7 @@ header {
     position: absolute;
     opacity: 50%;
     z-index: 1;
-    animation: profileBall .5s alternate-reverse infinite ease-in;
+    animation: profileBall 0.5s alternate-reverse infinite ease-in;
     display: none;
 }
 
@@ -263,12 +263,12 @@ header {
     content: "";
     display: none;
     background: radial-gradient(
-            circle,
-            rgba(69, 199, 252, 1) 24%,
-            rgba(253, 29, 29, 1) 51%,
-            rgba(131, 58, 180, 1) 0%,
-            rgba(252, 176, 69, 1) 82%
-        );
+        circle,
+        rgba(69, 199, 252, 1) 24%,
+        rgba(253, 29, 29, 1) 51%,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(252, 176, 69, 1) 82%
+    );
     width: 50px;
     border-radius: 100%;
     height: 50px;
@@ -739,16 +739,79 @@ input[type="submit"] {
 }
 
 // ------------------------- RESPONSIVE ------------------------- //
+// @media (max-width: 1200px) {
+//     body {
+//         background: rgb(255, 0, 0);
+//     }
+// }
+
+// @media (max-width: 992px) {
+//     body {
+//         background: rgb(94, 255, 0);
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     body {
+//         background: rgb(0, 132, 255);
+//     }
+// }
+
 @media (max-width: 576px) {
-    body {
-        background: rgb(247, 0, 255);
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #logo {
+        margin: size(1) 0;
+        padding-left: 0;
+    }
+
+    #root {
+        width: 95%;
+    }
+
+    #search_area {
+        margin: size(1) 0;
+        width: 90%;
+    }
+
+    #personal {
+        display: none;
+    }
+
+    #banner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+
+        #texto {
+            padding: size(2);
+            text-align: center;
+        }
+
+        #icons {
+            display: none;
+        }
+
+        h1 {
+            margin: 0;
+        }
     }
 
     footer {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
         flex-wrap: wrap;
+        background-size: 50%;
+
+        #footer-area {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
     }
 
     #infop {
@@ -757,17 +820,18 @@ input[type="submit"] {
 
     #social {
         width: 100%;
+        padding-bottom: size(3);
+        border: 2px dashed rgba(255, 255, 255, 0.1);
+        border-left: none;
+        border-right: none;
     }
 
     #copyright {
         width: 100%;
     }
 
-    section#main_content article:nth-child(1n),
-    section#main_content article:nth-child(2n),
-    section#main_content article:nth-child(3n),
-    section#main_content article:nth-child(4n) {
+    section#main_content article {
         width: 80%;
-        background: rgb(247, 0, 255);
+        height: auto;
     }
 }
