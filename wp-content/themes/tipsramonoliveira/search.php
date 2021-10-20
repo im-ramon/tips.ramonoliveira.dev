@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <main>
+    <h1 style="text-align: center;">Resultados encontrados:</h1>
     <section id="main_content">
-       
         <?php
         if (have_posts()) :
             while (have_posts()) :

@@ -13,9 +13,9 @@
                 <a href="https://github.com/im-ramon/" target="_BLANK" title="Github">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/i.m.ramon/" title="Instagram" target="_BLANK">
+                <!-- <a href="https://www.instagram.com/i.m.ramon/" title="Instagram" target="_BLANK">
                     <i class="fab fa-instagram"></i>
-                </a>
+                </a> -->
                 <a href="mailto:contato@ramonoliveira.dev" title="E-mail" target="_BLANK">
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -29,10 +29,9 @@
         </section>
         
         <section id="copyright">
-            <span>Ramon Oliveira</span>
-            <br>
-            <a href="https://ramonoliveira.dev" target="_BLANK" title="Portifólio">www.ramonoliveira.dev</a>
-            <a href="mailto:contato@ramonoliveira.dev" title="E-mail" target="_BLANK">contato@ramonoliveira.dev</a>
+            <!-- <span>Ramon Oliveira</span> -->
+            <a href="https://ramonoliveira.dev" target="_BLANK" title="Portifólio">ramonoliveira.dev</a>
+            <a href="mailto:contato@ramonoliveira.dev" title="E-mail" target="_BLANK">email: contato@ramonoliveira.dev</a>
             <p>Todos os direitos reservados. &copy;</p>
         </section>
     </div>

@@ -1,20 +1,5 @@
 <?php
-/**
- * The template for displaying comments
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
- */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
+// Removi os comentários aqui
 if ( post_password_required() ) {
 	return;
 }
@@ -28,13 +13,13 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				/* translators: %s: Post title. */
-				printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'twentysixteen' ), get_the_title() );
+				printf( _x( '1 comentário em: &ldquo;%s&rdquo;', 'comments title', 'twentysixteen' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: Number of comments, 2: Post title. */
 					_nx(
-						'%1$s thought on &ldquo;%2$s&rdquo;',
-						'%1$s thoughts on &ldquo;%2$s&rdquo;',
+						'%1$s comentário em: &ldquo;%2$s&rdquo;',
+						'%1$s comentários em: &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
 						'twentysixteen'
@@ -47,7 +32,7 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php the_comments_navigation(); ?>
-
+			
 		<ol class="comment-list">
 			<?php
 				wp_list_comments(

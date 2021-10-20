@@ -362,7 +362,6 @@ main {
   border-radius: 16px;
   border: 2px dashed rgba(128, 128, 128, 0.527);
   width: 100%;
-  height: 400px;
   background: #f8f9fa;
   display: -ms-grid;
   display: grid;
@@ -915,6 +914,120 @@ input[type="submit"]:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  #banner {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #banner #icons {
+    -webkit-transform: translateX(-3.2em);
+            transform: translateX(-3.2em);
+  }
+  #banner #texto {
+    padding: 24px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #logo {
+    margin: 8px 0;
+    padding-left: 0;
+  }
+  #search_area {
+    margin: 8px 0;
+    width: 90%;
+  }
+  #personal {
+    display: none;
+  }
+  #banner {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #banner #icons {
+    -webkit-transform: translateX(-5em) scale(0.65);
+            transform: translateX(-5em) scale(0.65);
+  }
+  #banner #texto {
+    padding: 24px;
+    height: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #logo {
+    margin: 8px 0;
+    padding-left: 0;
+  }
+  #search_area {
+    margin: 8px 0;
+    width: 90%;
+  }
+  #personal {
+    display: none;
+  }
+  #banner {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #banner #texto {
+    padding: 16px;
+    z-index: 2;
+  }
+  #banner h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  #banner h2 {
+    text-align: center;
+    font-size: 16px;
+  }
+  #banner p {
+    text-align: center;
+  }
+  #banner img.laptop {
+    width: 250px;
+  }
+  #banner #icons {
+    -webkit-transform: translateX(-8em) scale(0.65);
+            transform: translateX(-8em) scale(0.65);
+    z-index: 1;
+  }
 }
 
 @media (max-width: 576px) {
