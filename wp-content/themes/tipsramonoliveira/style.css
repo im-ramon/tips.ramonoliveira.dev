@@ -7,6 +7,7 @@ Author URI: https://tips.ramonoliveira.dev
 Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
 Version: 1.0.0
 */
+@import url(styles/color_languages.css);
 /* ------------ Variables ------------ */
 /* ------------ Functions ------------ */
 /* ------------ Animations ------------ */
@@ -279,6 +280,7 @@ header {
 
 #personal img.profilepic {
   width: 32px;
+  cursor: default;
   margin-left: 1em;
   z-index: 2;
 }
@@ -484,6 +486,7 @@ nav#languages h3 {
   border-top: none;
   border-right: none;
   border-left: none;
+  border-bottom: 2px solid #000;
   padding: 2px 8px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -583,32 +586,6 @@ section#main_content .iten_info a {
   text-decoration: none;
 }
 
-.iten.sem.categoria,
-.all {
-  border: 2px solid #000;
-}
-
-.python {
-  border: 2px solid #26759a;
-}
-
-.html5 {
-  border: 2px solid #eb5e29;
-}
-
-.javascript {
-  border: 2px solid #f8df1e;
-  background: lawngreen;
-}
-
-.wordpress {
-  border: 2px solid #26759a;
-}
-
-.sass {
-  border: 2px solid #cd6799;
-}
-
 footer {
   border-radius: 16px;
   font-weight: 300;
@@ -624,6 +601,7 @@ footer {
   background: #22272e;
   border-radius: 16px;
   gap: 1em;
+  text-align: center;
   color: #f8f9fa;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -723,15 +701,35 @@ footer {
 
 .post_body {
   background: #f8f9fa;
+  padding: 16px;
+  border: 2px dashed #00000020;
   border-radius: 16px;
 }
 
 .post_title {
-  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #22272e;
-  padding: 8px 16px;
   text-transform: uppercase;
   border-bottom: 2px solid #22272e;
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+
+.post_title h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 16px;
+  font-weight: 900;
 }
 
 .post_info {
@@ -745,7 +743,16 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 0 24px 16px 0;
+  opacity: 50%;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  cursor: default;
+}
+
+.post_info:hover {
+  opacity: 100%;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .post_date {
@@ -778,17 +785,24 @@ footer {
 }
 
 .post_content {
-  margin-top: 16px;
-  font-weight: 500;
+  padding: 0px 40px;
+  margin-bottom: 48px;
 }
 
-.post_content p {
-  text-indent: 40px;
-  text-align: justify;
+.post_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .img_logo_title {
-  width: 16px;
+  width: 40px;
 }
 
 #comments {

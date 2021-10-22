@@ -10,7 +10,7 @@
 <section id="icons">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\laptop.png" alt="laptop" class="laptop">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\CSS.png" alt="" class="circle_css">
-    <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\HTML.png" alt="" class="circle_html">
+    <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\html.png" alt="" class="circle_html">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\javascript.png" alt="" class="circle_javascript">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\python.png" alt="" class="circle_python">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\react.png" alt="" class="circle_react">

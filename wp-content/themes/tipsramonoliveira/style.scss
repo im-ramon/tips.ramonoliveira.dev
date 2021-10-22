@@ -7,6 +7,8 @@ Description: Tema do site de dicas e anotações pessoias - Ramon Oliveira
 Version: 1.0.0
 */
 
+@import url(styles/color_languages.css);
+
 /* ------------ Variables ------------ */
 $red: #cd0034;
 $blue: #004cdc;
@@ -227,6 +229,7 @@ header {
 
     img.profilepic {
         width: size(4);
+        cursor: default;
         margin-left: 1em;
         z-index: 2;
     }
@@ -407,6 +410,7 @@ nav#languages {
         border-top: none;
         border-right: none;
         border-left: none;
+        border-bottom: 2px solid #000;
         padding: 2px 8px;
         border-top-left-radius: size(0.5);
         border-top-right-radius: size(0.5);
@@ -473,32 +477,6 @@ section#main_content {
     }
 }
 
-.iten.sem.categoria,
-.all {
-    border: 2px solid #000;
-}
-
-.python {
-    border: 2px solid #26759a;
-}
-
-.html5 {
-    border: 2px solid #eb5e29;
-}
-
-.javascript {
-    border: 2px solid #f8df1e;
-    background: lawngreen;
-}
-
-.wordpress {
-    border: 2px solid #26759a;
-}
-
-.sass {
-    border: 2px solid #cd6799;
-}
-
 // ------------------------- FOOTER ------------------------- //
 footer {
     border-radius: size(2);
@@ -519,6 +497,7 @@ footer {
     background: $black-2;
     border-radius: size(2);
     gap: 1em;
+    text-align: center;
     color: $light;
 
     #infop {
@@ -578,23 +557,42 @@ footer {
 // ------------------------- POSTS ------------------------- //
 .post_body {
     background: $light;
+    padding: size(2);
+    border: 2px dashed #00000020;
     border-radius: size(2);
 }
 
 .post_title {
-    // background: $black-2;
-    font-weight: 900;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
     color: $black-2;
-    padding: size(1) size(2);
     text-transform: uppercase;
     border-bottom: 2px solid $black-2;
+    margin-bottom: size(1);
+    padding-left: size(2);
+
+    h1 {
+        font-size: size(3);
+        margin: 0;
+        padding: size(2);
+        font-weight: 900;
+    }
 }
 
 .post_info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 0 size(3) size(2) 0;
+    opacity: 50%;
+    transition: opacity .3s ease-in-out;
+    cursor: default;
+
+    &:hover {
+        opacity: 100%;
+        transition: opacity .3s ease-in-out;
+    }
 }
 
 .post_date {
@@ -628,16 +626,18 @@ footer {
 }
 
 .post_content {
-    margin-top: size(2);
-    font-weight: 500;
-    p {
-        text-indent: size(5);
-        text-align: justify;
-    }
+    padding: size(0) size(5);
+    margin-bottom: size(6);
+}
+
+.post_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .img_logo_title {
-    width: size(2);
+    width: size(5);
 }
 // ------------------------- COMMENTS ------------------------- //
 #comments {
