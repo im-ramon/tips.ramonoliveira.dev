@@ -8,7 +8,10 @@
 </section>
 
 <section id="icons">
-    <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\laptop.png" alt="laptop" class="laptop">
+    <div id="laptop">
+        <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\notebook.png" alt="laptop" class="laptop">
+        <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\notebook-shadow.png" alt="shadow" class="laptop-shadow">
+    </div>
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\CSS.png" alt="" class="circle_css">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\html.png" alt="" class="circle_html">
     <img src="<?php echo get_template_directory_uri(); ?>\images\icones-banner\javascript.png" alt="" class="circle_javascript">

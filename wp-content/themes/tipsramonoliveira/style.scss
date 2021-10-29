@@ -37,12 +37,40 @@ $white-inactive: #ffffff90;
 /* ------------ Animations ------------ */
 @keyframes moveBall {
     0% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     100% {
-        -webkit-transform: translateY(-3em);
+        transform: translateY(-3.5em);
+    }
+}
+
+@keyframes moveLaptop {
+    100% {
         transform: translateY(-3em);
+    }
+}
+
+@keyframes moveShadow {
+    100% {
+        opacity: 35%;
+    }
+}
+
+@keyframes colorLogo {
+    0% {
+        color: rgba(131, 58, 180, 1);
+    }
+
+    25% {
+        color: rgba(69, 199, 252, 1);
+    }
+
+    50% {
+        color: rgba(253, 29, 29, 1);
+    }
+
+    75% {
+        color: rgba(252, 176, 69, 1);
     }
 }
 
@@ -149,6 +177,51 @@ header {
     justify-content: start;
     padding-left: size(5);
 }
+
+#logo_container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+
+    img {
+        height: 50px;
+        transform: translateY(2px);
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+            transition: 0.5s ease-in-out;
+            transform: scale(1.2) rotate(-15deg);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        position: relative;
+    }
+
+    span {
+        font-family: "Poppins", sans-serif;
+        font-size: size(3);
+        margin: 0 0 0 size(1.5);
+        color: $white;
+    }
+    .tips {
+        display: block;
+        font-family: "Dancing Script", cursive;
+        position: absolute;
+        font-weight: 500;
+        margin: 0;
+        right: 0;
+        font-size: 26px;
+        bottom: -12px;
+        color: #fff;
+        animation: colorLogo 10s alternate-reverse infinite ease-in;
+    }
+}
+
 #personal {
     display: flex;
     align-items: center;
@@ -162,7 +235,6 @@ header {
     a {
         padding: 0;
         margin: 0;
-        font-size: 0;
     }
 }
 
@@ -304,6 +376,7 @@ header {
 main {
     margin-bottom: size(5);
 }
+
 #banner {
     border-radius: size(2);
     border: 2px dashed rgba(128, 128, 128, 0.527);
@@ -319,17 +392,33 @@ main {
         margin: size(3) 0;
     }
 
+    #laptop {
+        // background: #00ac49;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        // *{ border: 1px solid red;}
+
+        img.laptop {
+            width: 550px;
+            z-index: 2;
+            position: absolute;
+            animation: moveLaptop 5s ease-in-out 0s infinite alternate;
+        }
+        img.laptop-shadow {
+            width: 550px;
+            z-index: 1;
+            position: absolute;
+            animation: moveShadow 5s ease-in-out 0s infinite alternate;
+        }
+    }
     #icons {
         position: relative;
 
         img {
             width: 70px;
             position: absolute;
-        }
-
-        img.laptop {
-            width: 550px;
-            z-index: 2;
         }
 
         .circle_javascript {
@@ -343,7 +432,7 @@ main {
             bottom: 30px;
             left: 10px;
             animation: moveBall 3s ease-in-out 1s infinite alternate;
-            z-index: 3;
+            z-index: 1;
         }
 
         .circle_html {
@@ -356,14 +445,14 @@ main {
             bottom: 292px;
             left: 400px;
             animation: moveBall 3s ease-in-out 1s infinite alternate;
-            z-index: 1;
+            z-index: 3;
         }
 
         .circle_react {
             bottom: 140px;
             left: 80px;
             animation: moveBall 10s ease-in-out 0s infinite alternate;
-            z-index: 1;
+            z-index: 3;
         }
     }
 
@@ -586,12 +675,12 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     opacity: 50%;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     cursor: default;
 
     &:hover {
         opacity: 100%;
-        transition: opacity .3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
     }
 }
 
@@ -826,11 +915,8 @@ input[type="submit"] {
         p {
             text-align: center;
         }
-        img.laptop {
-            width: 250px;
-        }
         #icons {
-            transform: translateX(-8em) scale(0.65);
+            transform: translateX(-7em) scale(0.65);
             z-index: 1;
         }
     }
@@ -862,6 +948,10 @@ input[type="submit"] {
         display: none;
     }
 
+    #icons {
+        display: none;
+    }
+
     #banner {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
@@ -869,10 +959,6 @@ input[type="submit"] {
         #texto {
             padding: size(2);
             text-align: center;
-        }
-
-        #icons {
-            display: none;
         }
 
         h1 {
@@ -885,6 +971,7 @@ input[type="submit"] {
         flex-direction: column;
         flex-wrap: wrap;
         background-size: 50%;
+        margin-top: size(10);
 
         #footer-area {
             display: flex;
