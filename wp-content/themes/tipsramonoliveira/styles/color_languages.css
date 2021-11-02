@@ -28,6 +28,10 @@
     border-bottom: 2px solid #de4c36;
 }
 
+#languages_area  label.reactnative {
+    border-bottom: 2px solid #de4c36;
+}
+
 
 
 /* Article - Cards */
@@ -62,4 +66,8 @@
 
 .git {
     border: 2px solid #de4c36;
+}
+
+.reactnative {
+    border: 2px solid #61dbfa;
 }
