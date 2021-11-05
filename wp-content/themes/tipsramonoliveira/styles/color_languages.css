@@ -32,7 +32,13 @@
     border-bottom: 2px solid #de4c36;
 }
 
+#languages_area  label.laravel {
+    border-bottom: 2px solid #ee2c20;
+}
 
+#languages_area  label.php {
+    border-bottom: 2px solid #8792bf;
+}
 
 /* Article - Cards */
 .iten,
@@ -70,4 +76,12 @@
 
 .reactnative {
     border: 2px solid #61dbfa;
+}
+
+.laravel {
+    border: 2px solid #ee2c20;
+}
+
+.php {
+    border: 2px solid #8792bf;
 }

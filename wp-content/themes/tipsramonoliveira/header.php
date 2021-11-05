@@ -46,8 +46,8 @@
         </div>
 
         <div id="personal">
-            <a href="https://ramonoliveira.dev/tree" target="_BLANK" title="Instagram"><i class="fab fa-whatsapp"></i></a>
-            <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Dev | Ramon Oliveira">
+            <a href="https://ramonoliveira.dev/tree" target="_BLANK" title="Contato"><i class="fab fa-whatsapp"></i></a>
+            <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Developer | Ramon Oliveira">
         </div>
     </header>
 

@@ -12,7 +12,7 @@
                     continue;
                 endif;
                 ?>
-                <label class="<?php echo strtolower($category->name); ?>"><input type="radio" class="selectlang"  id="checkbox-<?php echo strtolower($category->name); ?>"  name="languages" value="<?php echo strtolower($category->name); ?>"><?php echo $category->name; ?></label>
+                <label class="<?php echo str_replace(array("-", " "),"", strtolower($category->name)); ?>"><input type="radio" class="selectlang"  id="checkbox-<?php echo str_replace(array("-", " "),"", strtolower($category->name)); ?>"  name="languages" value="<?php echo str_replace(array("-", " "),"", strtolower($category->name)); ?>"><?php echo $category->name; ?></label>
             <?php } ?>
         </div>
     </nav>
