@@ -459,6 +459,7 @@ main {
     #texto {
         overflow: hidden;
         padding: size(6);
+        user-select: none;
     }
 }
 

@@ -25,11 +25,11 @@
 }
 
 #languages_area  label.firebase {
-    border-bottom: 2px solid #de4c36;
+    border-bottom: 2px solid #faca3f;
 }
 
 #languages_area  label.reactnative {
-    border-bottom: 2px solid #de4c36;
+    border-bottom: 2px solid #61dbfa;
 }
 
 #languages_area  label.laravel {
