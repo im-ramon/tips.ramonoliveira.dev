@@ -40,6 +40,10 @@
     border-bottom: 2px solid #8792bf;
 }
 
+#languages_area  label.bash {
+    border-bottom: 2px solid rgb(177, 66, 127);
+}
+
 /* Article - Cards */
 .iten,
 .all {
@@ -84,4 +88,8 @@
 
 .php {
     border: 2px solid #8792bf;
+}
+
+.bash {
+    border: 2px solid rgb(177, 66, 127);
 }
