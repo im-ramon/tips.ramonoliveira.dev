@@ -1,95 +1,103 @@
 /* Label - Choose a language */
-#languages_area #languages_area  label.iten.sem.categoria,
-#languages_area #languages_area  label.all {
-    border-bottom: 2px solid #000;
+#languages_area #languages_area label.iten.sem.categoria,
+#languages_area #languages_area label.all {
+  border-bottom: 2px solid #000;
 }
 
-#languages_area  label.python {
-    border-bottom: 2px solid #26759a;
+#languages_area label.python {
+  border-bottom: 2px solid #26759a;
 }
 
-#languages_area  label.html5 {
-    border-bottom: 2px solid #eb5e29;
+#languages_area label.html5 {
+  border-bottom: 2px solid #eb5e29;
 }
 
-#languages_area  label.javascript {
-    border-bottom: 2px solid #f8df1e;
+#languages_area label.javascript {
+  border-bottom: 2px solid #f8df1e;
 }
 
-#languages_area  label.wordpress {
-    border-bottom: 2px solid #26759a;
+#languages_area label.wordpress {
+  border-bottom: 2px solid #26759a;
 }
 
-#languages_area  label.sass {
-    border-bottom: 2px solid #cd6799;
+#languages_area label.sass {
+  border-bottom: 2px solid #cd6799;
 }
 
-#languages_area  label.firebase {
-    border-bottom: 2px solid #faca3f;
+#languages_area label.firebase {
+  border-bottom: 2px solid #faca3f;
 }
 
-#languages_area  label.reactnative {
-    border-bottom: 2px solid #61dbfa;
+#languages_area label.reactnative {
+  border-bottom: 2px solid #61dbfa;
 }
 
-#languages_area  label.laravel {
-    border-bottom: 2px solid #ee2c20;
+#languages_area label.laravel {
+  border-bottom: 2px solid #ee2c20;
 }
 
-#languages_area  label.php {
-    border-bottom: 2px solid #8792bf;
+#languages_area label.php {
+  border-bottom: 2px solid #8792bf;
 }
 
-#languages_area  label.bash {
-    border-bottom: 2px solid rgb(177, 66, 127);
+#languages_area label.bash {
+  border-bottom: 2px solid rgb(177, 66, 127);
+}
+
+#languages_area label.vuejs {
+  border-bottom: 2px solid #41b783;
 }
 
 /* Article - Cards */
 .iten,
 .all {
-    border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .python {
-    border: 2px solid #26759a;
+  border: 2px solid #26759a;
 }
 
 .html5 {
-    border: 2px solid #eb5e29;
+  border: 2px solid #eb5e29;
 }
 
 .javascript {
-    border: 2px solid #f8df1e;
+  border: 2px solid #f8df1e;
 }
 
 .wordpress {
-    border: 2px solid #26759a;
+  border: 2px solid #26759a;
 }
 
 .sass {
-    border: 2px solid #cd6799;
+  border: 2px solid #cd6799;
 }
 
 .firebase {
-    border: 2px solid #f6820c;
+  border: 2px solid #f6820c;
 }
 
 .git {
-    border: 2px solid #de4c36;
+  border: 2px solid #de4c36;
 }
 
 .reactnative {
-    border: 2px solid #61dbfa;
+  border: 2px solid #61dbfa;
 }
 
 .laravel {
-    border: 2px solid #ee2c20;
+  border: 2px solid #ee2c20;
 }
 
 .php {
-    border: 2px solid #8792bf;
+  border: 2px solid #8792bf;
 }
 
 .bash {
-    border: 2px solid rgb(177, 66, 127);
+  border: 2px solid rgb(177, 66, 127);
+}
+
+.vuejs {
+  border: 2px solid #41b783;
 }
