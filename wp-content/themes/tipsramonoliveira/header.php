@@ -31,7 +31,7 @@
                 <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/svg/logo.svg" alt="r">
                 </a>
-                
+
                 <a href="/">
                     <span>ramonoliveira.dev</span>
                     <span class="tips">tips</span>
@@ -46,7 +46,7 @@
         </div>
 
         <div id="personal">
-            <a href="https://ramonoliveira.dev/tree" target="_BLANK" title="Contato"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=+5575991537677&text=Ol%C3%A1,%20peguei%20seu%20número%20no%20site." target="_BLANK" title="Contato"><i class="fab fa-whatsapp"></i></a>
             <img class="profilepic" src="<?php echo get_template_directory_uri(); ?>/images/profile-pic.png" alt="Foto do perfil" title="Developer | Ramon Oliveira">
         </div>
     </header>
